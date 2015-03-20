@@ -2,11 +2,8 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:io';
-import 'dart:convert';
-import 'dart:async';
 
 import 'package:args/args.dart';
-import 'package:archive/archive.dart';
 import 'package:Updater/Updater.dart';
 
 main(List<String> args) async {
@@ -77,7 +74,7 @@ main(List<String> args) async {
 			path_dir_list.removeAt(path_dir_list.length - 2);
 			path_out = path_dir_list.join(Platform.pathSeparator);
 		} else {
-			print(parser.usage);
+			stdout.write(parser.usage + "\n");
 			return;
 		}
 
@@ -124,9 +121,9 @@ main(List<String> args) async {
 		unZip(zipper_file, download_location);
 		stdout.write("Update finish, enjoy !");
 	} on FormatException catch (e) {
-		print(parser.usage);
+		stdout.write(parser.usage + "\n");
 		return;
 	} catch(e) {
-		print(e);
+		stderr.write(e + "\n");
 	}
 }

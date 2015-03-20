@@ -7,6 +7,8 @@ import 'dart:io';
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:archive/archive.dart';
+
 part 'src/get.dart';
 part 'src/platform.dart';
 part 'src/zip.dart';
