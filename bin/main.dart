@@ -4,7 +4,7 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:Updater/Updater.dart';
+import 'package:dart_updater/dart_updater.dart';
 
 main(List<String> args) async {
 	List<String> allowed_update = ["editor", "sdk", "dartium", "all"];

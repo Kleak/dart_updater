@@ -1,4 +1,4 @@
-part of Updater;
+part of dart_updater;
 
 Future<String> getLastVersionAndRevisionInfo(String channel) async {
 	//  Get the json info on the last version

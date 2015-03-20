@@ -1,4 +1,4 @@
-# Updater
+# dart_pdater
 
 Updater is a command line tool to update dart.
 

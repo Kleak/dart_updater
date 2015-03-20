@@ -1,4 +1,4 @@
-name: Updater
+name: dart_updater
 version: 0.0.1
 description: Command line dart program to update dart sdk and/or Dart Editor
 author: Kevin Segaud <segaud.kevin@gmail.com>

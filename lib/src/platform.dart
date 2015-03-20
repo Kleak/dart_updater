@@ -1,4 +1,4 @@
-part of Updater;
+part of dart_updater;
 
 String getSystem() {
 	if (Platform.isWindows) return "windows";

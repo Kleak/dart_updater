@@ -1,4 +1,4 @@
-part of Updater;
+part of dart_updater;
 
 void unZip(File file, String out_path) {
 	stdout.write("Starting unzip...\n");

@@ -3,7 +3,7 @@
 
 library Updater_test;
 
-import 'package:Updater/Updater.dart';
+import 'package:Updater/dart_updater.dart';
 import 'package:unittest/unittest.dart';
 
 void main() => defineTests();
