@@ -10,6 +10,8 @@ You can specified the channel with the param -c or --channel and the argument de
 
 You can specified if you want to update all with the param -u or --update and the argument all editor or sdk
 
+updater [-c [dev, stable]] [-u [editor, sdk, all]]
+
 ## Warning
 
 This package is in development.
