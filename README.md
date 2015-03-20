@@ -15,3 +15,5 @@ dart_updater [-c [dev, stable]] [-u [editor, sdk, all]]
 ## Warning
 
 This package is in development.
+
+You have to enable async in the vm with the --enable-async flag
