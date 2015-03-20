@@ -1,0 +1,12 @@
+name: Updater
+version: 0.0.1
+description: Command line dart program to update dart sdk and/or Dart Editor
+author: Kevin Segaud <segaud.kevin@gmail.com>
+homepage:
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+dependencies:
+  args: any
+  archive: any
+dev_dependencies:
+  unittest: any
