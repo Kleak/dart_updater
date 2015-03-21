@@ -53,14 +53,14 @@ main(List<String> args) async {
 		}
 		String file_name = null;
 		List<String> path_dir_list = Platform.environment["DARTSDK"].split(Platform.pathSeparator);
-		if (path_dir_list.length < 5) {
-			stderr.write("Directory not found, DARTSDK path is: $path_dir_list");
-			return;
-		}
 		String path_out = null;
 		if (result["update"] == "editor" || result["update"] == "all") {
 			file_name = "darteditor-" + system + "-" + archi + ".zip";
 			url += "editor/" + file_name;
+			if (path_dir_list.length < 5) {
+				stderr.write("Directory not found, DARTSDK path is: $path_dir_list");
+				return;
+			}
 			path_dir_list.removeAt(path_dir_list.length - 2);
 			path_dir_list.removeAt(path_dir_list.length - 2);
 			path_dir_list.removeAt(path_dir_list.length - 2);
@@ -70,6 +70,10 @@ main(List<String> args) async {
 			stdout.write("Sorry but for the momment we are nto able to update dartium only.");
 		} else if (result["update"] == "sdk") {
 			url += "sdk/dartsdk-" + system + "-" + archi + "-release.zip";
+			if (path_dir_list.length < 4) {
+				stderr.write("Directory not found, DARTSDK path is: $path_dir_list");
+				return;
+			}
 			path_dir_list.removeAt(path_dir_list.length - 2);
 			path_dir_list.removeAt(path_dir_list.length - 2);
 			path_out = path_dir_list.join(Platform.pathSeparator);
