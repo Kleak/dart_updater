@@ -77,6 +77,9 @@ main(List<String> args) async {
 			stdout.write(parser.usage + "\n");
 			return;
 		}
+		if (path_out != null) {
+			return;
+		}
 
 		Map json = await getLastVersionAndRevisionInfo(result["channel"]);
 		int last_revision = int.parse(json["revision"], onError: (e) => -1);
@@ -117,8 +120,7 @@ main(List<String> args) async {
 		}
 
 		File zipper_file = await downloadPackage(url, file_name);
-		String download_location = getDownloadPath();
-		unZip(zipper_file, download_location);
+		unZip(zipper_file, path_out);
 		stdout.write("Update finish, enjoy !");
 	} on FormatException catch (e) {
 		stdout.write(parser.usage + "\n");
