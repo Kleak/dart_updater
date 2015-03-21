@@ -81,7 +81,7 @@ main(List<String> args) async {
 			stdout.write(parser.usage + "\n");
 			return;
 		}
-		if (path_out != null) {
+		if (path_out == null) {
 			return;
 		}
 
