@@ -68,6 +68,7 @@ main(List<String> args) async {
 		} else if (result["update"] == "dartium") {
 			url += "dartium/dartium-" + system + "-" + archi + "-release.zip";
 			stdout.write("Sorry but for the momment we are nto able to update dartium only.");
+			return;
 		} else if (result["update"] == "sdk") {
 			url += "sdk/dartsdk-" + system + "-" + archi + "-release.zip";
 			if (path_dir_list.length < 4) {
@@ -79,9 +80,6 @@ main(List<String> args) async {
 			path_out = path_dir_list.join(Platform.pathSeparator);
 		} else {
 			stdout.write(parser.usage + "\n");
-			return;
-		}
-		if (path_out == null) {
 			return;
 		}
 
